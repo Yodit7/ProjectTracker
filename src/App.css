@@ -1,0 +1,25 @@
+body {
+  background: white;
+  width: 1200px;
+  margin: auto;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* .main-container {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+} */
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: rgb(137, 137, 190);
+  width: 95%;
+  box-shadow: none;
+  margin-bottom: 20px;
+}
+
+.todo-container {
+  flex: 1;
+}
