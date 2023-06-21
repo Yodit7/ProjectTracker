@@ -48,7 +48,6 @@ export function ToDoList() {
       }
   
       const newTodos = [todo, ...todos];
-    //   console.log(todos)
       setTodos(newTodos);
     };
   
@@ -98,17 +97,6 @@ export function ToDoList() {
       setDone(removedArrDone);
 
     };
-  
-    // const handleOnDragEnd = (result) => {
-    //     if (!result.destination) return
-
-    //     console.log(result)
-    //     const items = Array.from(todos)
-    //     const [reorderedItem] = items.splice(result.index, 1)
-    //     items.splice(result.destination.index, 0, reorderedItem)
-
-    //     setTodos(items)
-    // }
 
     const handleOnDragEnd = (result) => {
         if (!result.destination) return;
@@ -168,8 +156,6 @@ export function ToDoList() {
           setDone([...done]);
         }
       };
-
-  
 
     return (
         <div className="main-container">

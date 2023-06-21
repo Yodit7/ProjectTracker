@@ -54,36 +54,3 @@ export default function ToDo( {todos, removeTodo, updateTodo}) {
     </div>
   )
   };
-
-
-// return (
-//   <div>
-//   {todos.map((todo, index) => (
-//     <Draggable key={todo.id} draggableId={todo.id.toString()} index={index}>
-//       {(provided) => (
-//         <div 
-//         className="todo-item" 
-//         key={index} 
-//         ref={provided.innerRef}
-//         {...provided.draggableProps}
-//         {...provided.dragHandleProps}>
-//           <div className="todo-text" key={todo.id}>
-//             {todo.text}
-//           </div>
-//           <div className='icons'>
-//             <RiCloseCircleLine
-//               onClick={() => removeTodo(todo.id)}
-//               className='delete-icon'
-//             />
-//             <TiEdit
-//               onClick={() => setEdit({ id: todo.id, value: todo.text })}
-//               className='edit-icon'
-//             />
-//           </div>
-//         </div>
-//       )}
-//     </Draggable>
-//   ))}
-//   </div>
-// )
-// };

@@ -19,9 +19,7 @@ export function Notes(props) {
             id: Math.floor(Math.random() * 100000),
             text: textarea_input
         })
-
-
-
+        
         setTextarea_Input('')
     }
 
