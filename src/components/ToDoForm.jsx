@@ -1,6 +1,6 @@
 import '../css/todo.css'
 import { useState, useRef, useEffect } from 'react'
-import { BiPlus } from "react-icons/bi";
+import { BiPlus, BiRevision } from "react-icons/bi";
 
 
 
@@ -39,7 +39,7 @@ export default function ToDoForm(props) {
               name="text" 
               ref={inputRef}
             />
-            <button className="btn-add" onClick={handleSubmit}>Update</button>  
+            <button className="btn-add" onClick={handleSubmit}><BiRevision className='add-icon' /></button>  
           </>
         ) : (
           <>

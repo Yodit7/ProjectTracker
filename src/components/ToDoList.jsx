@@ -181,18 +181,20 @@ export function ToDoList() {
                 </div>
                 <div><hr></hr></div>
                 <ToDoForm onSubmit={addTodo}/>
-                <Droppable droppableId="todos-section">
-                    {(provided) => (
-                        <div ref={provided.innerRef} {...provided.droppableProps}>
-                            <ToDo 
-                                todos={todos}
-                                removeTodo={removeTodo}
-                                updateTodo={updateTodo}
-                            />
-                            {provided.placeholder}
-                        </div>
-                    )}
-                </Droppable>
+                <div className="no-padding">
+                  <Droppable droppableId="todos-section">
+                      {(provided) => (
+                          <div ref={provided.innerRef} {...provided.droppableProps}>
+                              <ToDo 
+                                  todos={todos}
+                                  removeTodo={removeTodo}
+                                  updateTodo={updateTodo}
+                              />
+                              {provided.placeholder}
+                          </div>
+                      )}
+                  </Droppable>
+                </div>
             </div>
             <div className="container">
                 <div className="container-headline">
@@ -201,18 +203,20 @@ export function ToDoList() {
                 </div>
                 <div><hr></hr></div>
                 <ToDoForm onSubmit={addInProgress}/>
-                <Droppable droppableId="inprogress-section"> 
-                     {(provided) => ( 
-                        <div ref={provided.innerRef} {...provided.droppableProps}>
-                            <ToDo 
-                                todos={inProgress}
-                                removeTodo={removeTodo}
-                                updateTodo={updateTodo}
-                            />
-                            {provided.placeholder}
-                        </div>
-                     )}
-                    </Droppable>
+                <div className="no-padding">
+                  <Droppable droppableId="inprogress-section"> 
+                      {(provided) => ( 
+                          <div ref={provided.innerRef} {...provided.droppableProps}>
+                              <ToDo 
+                                  todos={inProgress}
+                                  removeTodo={removeTodo}
+                                  updateTodo={updateTodo}
+                              />
+                              {provided.placeholder}
+                          </div>
+                      )}
+                  </Droppable>
+                </div>
             </div>
             <div className="container">
                 <div className="container-headline">                
@@ -221,18 +225,20 @@ export function ToDoList() {
                 </div>
                 <div><hr></hr></div>
                 <ToDoForm onSubmit={addDone}/>
-                <Droppable droppableId="done-section">
-                    {(provided) => (
-                        <div ref={provided.innerRef} {...provided.droppableProps}>
-                        <ToDo 
-                            todos={done}
-                            removeTodo={removeTodo}
-                            updateTodo={updateTodo}
-                        />
-                        {provided.placeholder}
-                        </div>
-                    )}
-                </Droppable>
+                <div className="no-padd">
+                  <Droppable droppableId="done-section">
+                      {(provided) => (
+                          <div ref={provided.innerRef} {...provided.droppableProps}>
+                          <ToDo 
+                              todos={done}
+                              removeTodo={removeTodo}
+                              updateTodo={updateTodo}
+                          />
+                          {provided.placeholder}
+                          </div>
+                      )}
+                  </Droppable>
+                </div>
             </div>
             </DragDropContext>
         </div>

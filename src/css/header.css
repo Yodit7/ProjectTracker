@@ -9,6 +9,11 @@
     padding-left: 5px;
 }
 
+.page-title a {
+    text-decoration: none;
+    color: black;
+}
+
 .nav ul {
     display: flex;
     align-items: center;
