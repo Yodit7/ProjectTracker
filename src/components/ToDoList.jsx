@@ -1,13 +1,45 @@
 import ToDoForm from "./ToDoForm"
 import ToDo from "./ToDo"
 import '../css/todo.css'
-import { useState} from "react"
+import { useEffect, useState} from "react"
 import { Droppable, DragDropContext } from "react-beautiful-dnd";
 
 export function ToDoList() {
     const [todos, setTodos] = useState([]);
     const [inProgress, setInProgress] = useState([]);
     const [done, setDone] = useState([]);
+
+    const storedTodos = ""
+    useEffect(() => {
+      const storedTodos = JSON.parse(localStorage.getItem("todos"));
+      const storedInProgress = JSON.parse(localStorage.getItem("inProgress"));
+      const storedDone = JSON.parse(localStorage.getItem("done"));
+
+      if(storedTodos){
+        setTodos(storedTodos)
+      }
+  
+      if(storedInProgress){
+        setInProgress(storedInProgress)
+      }
+  
+      if(storedDone){
+        setDone(storedDone)
+      }
+    }, [])
+
+
+    useEffect(() => {
+      localStorage.setItem("todos", JSON.stringify(todos))
+    }, [todos])
+    
+    useEffect(() => {
+      localStorage.setItem("inProgress", JSON.stringify(inProgress))
+    }, [inProgress])
+
+    useEffect(() => {
+      localStorage.setItem("done", JSON.stringify(done))
+    }, [setDone])
 
 
     const addTodo = todo => {
@@ -137,12 +169,14 @@ export function ToDoList() {
         }
       };
 
+  
+
     return (
         <div className="main-container">
             <DragDropContext onDragEnd={handleOnDragEnd}>
             <div className="container">
                 <div className="container-headline">
-                    <h2>To Do List</h2>
+                    <h2>To Do's</h2>
                     <p>{todos.length}</p>
                 </div>
                 <div><hr></hr></div>

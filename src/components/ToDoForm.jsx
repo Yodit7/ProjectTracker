@@ -1,5 +1,7 @@
 import '../css/todo.css'
 import { useState, useRef, useEffect } from 'react'
+import { BiPlus } from "react-icons/bi";
+
 
 
 export default function ToDoForm(props) {
@@ -37,7 +39,7 @@ export default function ToDoForm(props) {
               name="text" 
               ref={inputRef}
             />
-            <button className="btn" onClick={handleSubmit}>Update</button>  
+            <button className="btn-add" onClick={handleSubmit}>Update</button>  
           </>
         ) : (
           <>
@@ -48,7 +50,7 @@ export default function ToDoForm(props) {
               name="text" 
               ref={inputRef}
             />
-            <button className="btn" onClick={handleSubmit}>Add</button>  
+            <button className="btn-add" onClick={handleSubmit}><BiPlus className="add-icon"/></button>  
           </>
         )}
       </form>
