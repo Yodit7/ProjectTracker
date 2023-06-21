@@ -145,10 +145,11 @@ hr {
 .notes-display {
     background-color: rgb(187, 196, 207);
     border-radius: 5px;
-    height: 60vh;
+    min-height: 320px;
+    height: auto;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    margin-bottom: 100px;
 }
 
 .note-item {
@@ -156,10 +157,16 @@ hr {
     flex-direction: row;
     justify-content: space-between;
     gap: 25px;
-    margin: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
     border-radius: 5px;
     padding: 25px;
     background-color: rgb(255, 255, 255);
+}
+
+.note-item:first-child {
+    margin-top: 10px;
 }
 
 .note-item:hover {
